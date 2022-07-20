@@ -6,5 +6,7 @@
 burp-wildcard: https://github.com/hvqzao/burp-wildcard.git  
 BurpCrypto: https://github.com/whwlsfb/BurpCrypto.git  
 BurpShiroPassiveScan: https://github.com/pmiaowu/BurpShiroPassiveScan.git  
+HaE: https://github.com/gh0stkey/HaE.git  
 Java-Deserialization-Scanner: https://github.com/federicodotta/Java-Deserialization-Scanner.git  
 log4j2Scan: https://github.com/pmiaowu/log4j2Scan.git   
+passive-scan-client: https://github.com/c0ny1/passive-scan-client.git  
