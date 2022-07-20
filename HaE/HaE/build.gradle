@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+    options.encoding = "UTF-8"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir './src/main/java'
+        }
+    }
+}
+
+task fatJar(type: Jar) {
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+dependencies {
+    compile 'net.portswigger.burp.extender:burp-extender-api:1.7.13'
+    compile 'org.jetbrains:annotations:16.0.2'
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.28'
+    compile 'net.sourceforge.jregex:jregex:1.2_01'
+    compile 'dk.brics.automaton:automaton:1.11-8'
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+}
